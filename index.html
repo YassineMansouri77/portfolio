@@ -1,129 +1,368 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Yassine Mansouri</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yassine Mansouri — BTS SIO SISR</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;900&family=JetBrains+Mono:wght@300;400;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
 
-<header>
-    <h1>Yassine Mansouri</h1>
-    <p>BTS SIO – Option SISR</p>
-</header>
+  <div class="grain"></div>
+  <div class="mesh-bg">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <div class="orb orb4"></div>
+  </div>
+  <canvas id="cvs"></canvas>
+  <div id="cur"></div>
+  <div id="cur2"></div>
 
-<nav>
-    <button class="tab-btn active" data-tab="about">À propos</button>
-    <button class="tab-btn" data-tab="formation">Formation</button>
-    <button class="tab-btn" data-tab="skills">Compétences</button>
-    <button class="tab-btn" data-tab="experience">Expériences</button>
-    <button class="tab-btn" data-tab="project">Projet</button>
-    <button class="tab-btn" data-tab="contact">Contact</button>
-</nav>
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nw">
+      <a href="#hero" class="logo">
+        <span class="lb">[</span><span class="ln">YM</span><span class="lb">]</span>
+      </a>
+      <ul id="nul">
+        <li><a href="#about"      data-s="about">Profil</a></li>
+        <li><a href="#skills"     data-s="skills">Skills</a></li>
+        <li><a href="#projects"   data-s="projects">Projets</a></li>
+        <li><a href="#experience" data-s="experience">Stages</a></li>
+        <li><a href="#contact"    data-s="contact">Contact</a></li>
+        <li><a href="pdf&image/CV_Yassine_Mansouri.pdf" download class="ndl"><i class="fas fa-file-arrow-down"></i> CV</a></li>
+      </ul>
+      <button class="brgr" id="brgr"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
 
-<main>
-    <section id="about" class="active">
-        <h2>À propos de moi</h2>
-        <p>Étudiant en BTS SIO option SISR au lycée Léonard de Vinci à Melun, passionné par les réseaux et la cybersécurité. Titulaire d’un Bac Professionnel Systèmes Numériques, j’ai acquis de solides bases en maintenance informatique et en installation de systèmes.</p>
-        <p>Sérieux, patient et sociable, je souhaite poursuivre mes études pour faire carrière dans la cybersécurité.</p>
-    </section>
-
-    <section id="formation">
-        <h2>Formation</h2>
-        <ul>
-            <li><strong>BTS SIO – Option SISR</strong> (2025 – 2027, en cours)<br>Lycée Léonard de Vinci – Melun</li>
-            <li><strong>Bac Professionnel Systèmes Numériques</strong><br>Option réseaux informatiques – Lycée Jacques Prévert</li>
-        </ul>
-    </section>
-
-    <section id="skills">
-        <h2>Compétences</h2>
-        <ul class="skills">
-            <li>Installation Windows & Linux (Ubuntu)</li>
-            <li>Maintenance et réparation de PC</li>
-            <li>Notions de réseaux informatiques</li>
-            <li>Installation de logiciels et périphériques</li>
-            <li>Notions de cybersécurité</li>
-            <li>HTML / CSS (bases)</li>
-        </ul>
-    </section>
-
-    <section id="experience">
-        <h2>Expériences professionnelles</h2>
-        <div class="experience">
-            <h3>Mairie de Dammarie-les-Lys</h3>
-            <p><em>Stage – Service informatique (1 semaines)</em></p>
-            <ul>
-                <li>Maintenance et réparation de PC fixes et portables</li>
-                <li>Installation de postes informatiques et d’écrans</li>
-                <li>Tests et sensibilisation à la cybersécurité</li>
-            </ul>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hi">
+      <div class="hl">
+        <div class="pill-av">
+          <span class="ping"></span>
+          Disponible — Recherche stage 2025 / 2027
         </div>
-        <div class="experience">
-            <h3>Confédération Syndicale des Familles</h3>
-            <p><em>Stage – Maintenance informatique (4 semaines)</em></p>
-            <ul>
-                <li>Maintenance informatique</li>
-                <li>Installation de systèmes Linux (Ubuntu)</li>
-            </ul>
+        <h1>
+          <span class="hn1">Yassine</span>
+          <span class="hn2">Mansouri</span>
+        </h1>
+        <div class="typed-w">
+          <span class="pr">&gt;_</span>
+          <span id="typed"></span><span class="bl">█</span>
         </div>
-        <div class="experience">
-            <h3>AMMI Informatique</h3>
-            <p><em>Stage – Informatique (4 semaines)</em></p>
-            <ul>
-                <li>Réparation de PC</li>
-                <li>Installation de Windows</li>
-            </ul>
+        <p class="hp">
+          Étudiant <strong>BTS SIO – SISR</strong> au Lycée Léonard de Vinci, Melun.<br>
+          Passionné par les <em class="er">réseaux</em>, l'<em class="eg">administration système</em> et la <em class="eo">cybersécurité</em>.
+        </p>
+        <div class="hbtns">
+          <a href="#projects" class="bp">Voir mes projets <i class="fas fa-arrow-right"></i></a>
+          <a href="pdf&image/CV_Yassine_Mansouri.pdf" download class="bs"><i class="fas fa-download"></i> Télécharger CV</a>
         </div>
-    </section>
+        <div class="hsoc">
+          <a href="https://www.linkedin.com/in/yassine-mansouri-b574b43b0/" target="_blank" class="si"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:mansouriyassine99@gmail.com" class="si"><i class="fas fa-envelope"></i></a>
+          <a href="tel:+33650903948" class="si"><i class="fas fa-phone"></i></a>
+          <a href="https://github.com/yassinemansouri77" target="_blank" class="si"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <div class="hr">
+        <div class="ow">
+          <div class="or1"></div><div class="or2"></div><div class="or3"></div>
+          <div class="oc"><i class="fas fa-user-shield"></i></div>
+          <span class="ol ot">BTS SIO SISR</span>
+          <span class="ol ob">Melun — 77</span>
+        </div>
+        <div class="tpills">
+          <span class="tp" style="--d:0s"><i class="fas fa-network-wired"></i> Cisco / VLAN</span>
+          <span class="tp" style="--d:.3s"><i class="fab fa-linux"></i> Linux Debian</span>
+          <span class="tp" style="--d:.6s"><i class="fas fa-server"></i> Windows Server</span>
+          <span class="tp" style="--d:.9s"><i class="fas fa-users-gear"></i> Active Directory</span>
+          <span class="tp" style="--d:1.2s"><i class="fas fa-globe"></i> Apache / DHCP</span>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="sc"><i class="fas fa-chevron-down"></i></a>
+  </section>
 
-    <section id="project">
-        <h2>Projet</h2>
-        <h3>Lampe à reconnaissance vocale</h3>
-        <p>Projet réalisé dans le cadre du projet de fin d’année du Bac Professionnel Systèmes Numériques. Cette lampe permet d’allumer ou d’éteindre l’éclairage grâce à des commandes vocales.</p>
-        <p>Ce projet m’a permis de travailler sur la programmation, l’électronique et la logique d’un système automatisé.</p>
-        <br>
-        Voici une video du projet que j'ai réaliser :
-    <a href="https://youtube.com/shorts/bVjnnL8XCJ4?si=p0NLoUlUBcMJzV6D/" target="_blank">
-        Voir la video
-    </a>
-    </section>
+  <!-- ABOUT -->
+  <section id="about" class="sec">
+    <div class="cnt">
+      <div class="sh"><span class="sn">01 /</span><h2>Profil <span class="go">& Formation</span></h2></div>
+      <div class="ag">
+        <div class="card reveal">
+          <span class="chip">À propos</span>
+          <p>Je m'appelle <strong>Yassine Mansouri</strong>, étudiant en <strong>BTS SIO option SISR</strong> au Lycée Léonard de Vinci à Melun.</p>
+          <p>Passionné par les infrastructures réseau, la gestion système et la cybersécurité, je veux bâtir une carrière dans l'administration des systèmes d'information.</p>
+          <p>Sérieux, curieux et sociable, je suis toujours prêt à apprendre de nouvelles technologies et à relever des défis techniques.</p>
+          <div class="tagsr">
+            <span class="tg tgr">Rigoureux</span><span class="tg tgg">Autonome</span>
+            <span class="tg tgo">Curieux</span><span class="tg tgr">Sociable</span>
+          </div>
+          <div class="metas">
+            <div class="mt"><i class="fas fa-location-dot er"></i><span>Melun, Seine-et-Marne (77)</span></div>
+            <div class="mt"><i class="fas fa-shield-halved eg"></i><span>Objectif : Cybersécurité / Admin Réseau</span></div>
+            <div class="mt"><i class="fas fa-envelope eo"></i><a href="mailto:mansouriyassine99@gmail.com">mansouriyassine99@gmail.com</a></div>
+            <div class="mt"><i class="fas fa-phone eo"></i><a href="tel:+33650903948">+33 6 50 90 39 48</a></div>
+          </div>
+        </div>
+        <div class="ar">
+          <div class="card reveal">
+            <span class="chip">Formation</span>
+            <div class="tl">
+              <div class="tli"><div class="tlm"></div>
+                <div class="tlb"><span class="tld">2025 — 2027</span><strong>BTS SIO – Option SISR</strong><p>Lycée Léonard de Vinci, Melun</p><span class="tlbg">En cours</span></div>
+              </div>
+              <div class="tli"><div class="tlm"></div>
+                <div class="tlb"><span class="tld">2022 — 2025</span><strong>Bac Pro Systèmes Numériques</strong><p>Option Réseaux — Lycée Jacques Prévert</p><span class="tlbg ok">Obtenu</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="card reveal">
+            <span class="chip">Langues</span>
+            <div class="lng"><span>Français</span><div class="lt"><div class="lf" data-v="90"></div></div><span class="ll">Courant</span></div>
+            <div class="lng"><span>Arabe</span><div class="lt"><div class="lf" data-v="35"></div></div><span class="ll">Élémentaire</span></div>
+            <div class="lng"><span>Anglais</span><div class="lt"><div class="lf" data-v="25"></div></div><span class="ll">Débutant</span></div>
+            <div class="lng"><span>Espagnol</span><div class="lt"><div class="lf" data-v="20"></div></div><span class="ll">Débutant</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email : <strong><a href="mailto:mansouriyassine99@gmail.com">mansouriyassine99@gmail.com</a></strong></p>
-        <p>Téléphone : +33 6 50 90 39 48 </p>
-        <p>
-        <p>
-    <a href="pdf&image/CV_Yassine_Mansouri.pdf" download class="btn-cv">
-        Télécharger mon CV
-    </a>
-</p>
-<br>
-<p>
-    LinkedIn :
-    <a href="https://www.linkedin.com/in/yassine-mansouri-b574b43b0/" target="_blank">
-        Voir mon profil
-    </a>
-</p>
+  <!-- SKILLS -->
+  <section id="skills" class="sec salt">
+    <div class="cnt">
+      <div class="sh"><span class="sn">02 /</span><h2>Compétences <span class="go">Techniques</span></h2></div>
+      <div class="skg">
+        <div class="card reveal">
+          <h3 class="skh"><i class="fas fa-network-wired er"></i> Réseaux</h3>
+          <ul class="skl">
+            <li><span>Cisco IOS / Packet Tracer</span><div class="sb"><div class="sbf" data-v="78"></div></div></li>
+            <li><span>TCP/IP · VLAN · Routage inter-VLAN</span><div class="sb"><div class="sbf" data-v="74"></div></div></li>
+            <li><span>DNS / DHCP (BIND9 · ISC-DHCP)</span><div class="sb"><div class="sbf" data-v="76"></div></div></li>
+            <li><span>VPN (OpenVPN / IPSec)</span><div class="sb"><div class="sbf" data-v="62"></div></div></li>
+            <li><span>Wireshark — Analyse de trames</span><div class="sb"><div class="sbf" data-v="68"></div></div></li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3 class="skh"><i class="fas fa-server eo"></i> Systèmes</h3>
+          <ul class="skl">
+            <li><span>Linux Debian / Ubuntu Server</span><div class="sb"><div class="sbf" data-v="80"></div></div></li>
+            <li><span>Windows Server 2019</span><div class="sb"><div class="sbf" data-v="70"></div></div></li>
+            <li><span>Active Directory / GPO</span><div class="sb"><div class="sbf" data-v="65"></div></div></li>
+            <li><span>VirtualBox — Virtualisation</span><div class="sb"><div class="sbf" data-v="78"></div></div></li>
+            <li><span>Apache2 · Nginx</span><div class="sb"><div class="sbf" data-v="62"></div></div></li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3 class="skh"><i class="fas fa-terminal er"></i> Dev & Outils</h3>
+          <ul class="skl">
+            <li><span>HTML / CSS</span><div class="sb"><div class="sbf" data-v="70"></div></div></li>
+            <li><span>Bash / Shell scripting</span><div class="sb"><div class="sbf" data-v="57"></div></div></li>
+            <li><span>Git / GitHub</span><div class="sb"><div class="sbf" data-v="52"></div></div></li>
+            <li><span>Maintenance PC & diagnostic</span><div class="sb"><div class="sbf" data-v="92"></div></div></li>
+            <li><span>Documentation technique</span><div class="sb"><div class="sbf" data-v="68"></div></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- PROJECTS -->
+  <section id="projects" class="sec">
+    <div class="cnt">
+      <div class="sh"><span class="sn">03 /</span><h2>Projets <span class="go">& TPs SISR</span></h2></div>
 
-    </section>
-</main>
+      <div class="fbar">
+        <button class="fb active" data-f="all">Tous</button>
+        <button class="fb" data-f="reseau">Réseaux</button>
+        <button class="fb" data-f="systeme">Systèmes</button>
+        <button class="fb" data-f="perso">Personnel</button>
+      </div>
 
-<footer>
-    <p>© 2026 – Yassine Mansouri</p>
-</footer>
+      <div class="pg">
 
-<script src="script.js"></script>
+        <article class="pc reveal" data-cat="reseau">
+          <div class="pct">
+            <div class="pcn">TP–03</div>
+            <div class="pctags"><span class="ptg pt-r">Réseau</span><span class="ptg pt-g">VirtualBox</span></div>
+          </div>
+          <h3>Construction d'un réseau virtuel</h3>
+          <p>Connexion de 3 VMs (Debian GUI, Windows 10, Debian CLI) via switch virtuel <em>Commutateur1</em> sous VirtualBox. Configuration IP statique 192.168.56.0/24, mise en place d'une BoxVirtuelle (passerelle + DNS), tests ping inter-machines et accès Internet.</p>
+          <div class="pcs"><code>VirtualBox</code><code>Réseau Interne</code><code>IP Statique</code><code>DNS</code><code>Passerelle</code></div>
+          <div class="pcf"><span class="stok"><i class="fas fa-circle-check"></i> Réalisé — BTS 1re année</span></div>
+        </article>
+
+        <article class="pc reveal" data-cat="reseau">
+          <div class="pct">
+            <div class="pcn">TP–04</div>
+            <div class="pctags"><span class="ptg pt-o">Service</span><span class="ptg pt-g">Linux</span></div>
+          </div>
+          <h3>Serveur DHCP ISC-DHCP-Server</h3>
+          <p>Installation et configuration d'un serveur DHCP sous Debian. Définition de plages d'adresses (range), attribution d'IP fixe par adresse MAC (dhcpd.conf), vérification des baux dans <em>dhcpd.leases</em>, journalisation via journalctl. Tests depuis clients Linux et Windows.</p>
+          <div class="pcs"><code>Debian</code><code>isc-dhcp-server</code><code>dhcpd.conf</code><code>Baux IP</code><code>systemctl</code></div>
+          <div class="pcf"><span class="stok"><i class="fas fa-circle-check"></i> Réalisé — BTS 1re année</span></div>
+        </article>
+
+        <article class="pc reveal" data-cat="systeme">
+          <div class="pct">
+            <div class="pcn">TP–07</div>
+            <div class="pctags"><span class="ptg pt-o">Web</span><span class="ptg pt-g">Linux</span></div>
+          </div>
+          <h3>Serveur Web Apache2 sur Debian</h3>
+          <p>Installation du serveur HTTP Apache2 sur Debian Server (IP fixe 192.168.56.251/24 via DHCP). Vérification ports d'écoute 80/443 (netstat), analyse journaux système (journalctl) et applicatifs (access.log, error.log). Test protocole HTTP depuis clients avec requêtes GET.</p>
+          <div class="pcs"><code>Apache2</code><code>Debian</code><code>HTTP port 80</code><code>access.log</code><code>error.log</code></div>
+          <div class="pcf"><span class="stok"><i class="fas fa-circle-check"></i> Réalisé — BTS 1re année</span></div>
+        </article>
+
+        <article class="pc reveal" data-cat="reseau">
+          <div class="pct">
+            <div class="pcn">TP–05</div>
+            <div class="pctags"><span class="ptg pt-r">Réseau</span><span class="ptg pt-g">Cisco</span></div>
+          </div>
+          <h3>Infrastructure VLANs avec Cisco</h3>
+          <p>Conception d'une architecture réseau segmentée avec VLANs sur switch Cisco (Packet Tracer). Configuration routage inter-VLAN, attribution DHCP par VLAN, mise en place d'ACL pour sécuriser les flux entre zones réseau et contrôler les accès.</p>
+          <div class="pcs"><code>Cisco IOS</code><code>Packet Tracer</code><code>VLAN</code><code>Routage</code><code>ACL</code></div>
+          <div class="pcf"><span class="stok"><i class="fas fa-circle-check"></i> Réalisé — BTS 1re année</span></div>
+        </article>
+
+        <article class="pc reveal" data-cat="systeme">
+          <div class="pct">
+            <div class="pcn">TP–08</div>
+            <div class="pctags"><span class="ptg pt-o">Système</span><span class="ptg pt-r">AD</span></div>
+          </div>
+          <h3>Active Directory & Stratégies GPO</h3>
+          <p>Déploiement d'un domaine Windows Server 2019 avec Active Directory. Création d'Unités Organisationnelles (OU), gestion des comptes, application de GPO, intégration DNS/DHCP dans le domaine. Jonction de postes clients au domaine.</p>
+          <div class="pcs"><code>Windows Server</code><code>Active Directory</code><code>GPO</code><code>OU</code><code>DNS</code></div>
+          <div class="pcf"><span class="stok"><i class="fas fa-circle-check"></i> Réalisé — BTS 1re année</span></div>
+        </article>
+
+        <article class="pc reveal" data-cat="perso">
+          <div class="pct">
+            <div class="pcn">BAC PRO</div>
+            <div class="pctags"><span class="ptg pt-r">Personnel</span><span class="ptg pt-o">IoT</span></div>
+          </div>
+          <h3>Lampe à Reconnaissance Vocale</h3>
+          <p>Projet de fin d'année Bac Pro Systèmes Numériques. Lampe intelligente contrôlée par commandes vocales. Intégration programmation embarquée, électronique et automatisation. Système complet de reconnaissance vocale pour pilotage marche/arrêt.</p>
+          <div class="pcs"><code>Arduino</code><code>Électronique</code><code>Programmation</code><code>IoT</code></div>
+          <div class="pcf">
+            <span class="stok"><i class="fas fa-circle-check"></i> Réalisé — Bac Pro</span>
+            <a href="https://youtube.com/shorts/bVjnnL8XCJ4" target="_blank" class="pclnk"><i class="fab fa-youtube"></i> Voir démo</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="sec salt">
+    <div class="cnt">
+      <div class="sh"><span class="sn">04 /</span><h2>Expériences <span class="go">Professionnelles</span></h2></div>
+      <div class="exl">
+
+        <div class="exc card reveal">
+          <div class="exa"><div class="exic"><i class="fas fa-building-columns"></i></div><div class="exln"></div></div>
+          <div class="exb">
+            <div class="exhd"><div><h3>AMMI Informatique</h3><span class="exr">Technicien Informatique — Stage</span></div><span class="exd">4 semaines</span></div>
+            <ul class="exul">
+              <li><i class="fas fa-caret-right eo"></i>Réparation et maintenance de PC fixes et portables</li>
+              <li><i class="fas fa-caret-right eo"></i>Installation, configuration et déploiement de Windows</li>
+              <li><i class="fas fa-caret-right eo"></i>Diagnostic matériel et logiciel, gestion des pannes</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exc card reveal">
+          <div class="exa"><div class="exic"><i class="fas fa-people-group"></i></div><div class="exln"></div></div>
+          <div class="exb">
+            <div class="exhd"><div><h3>Confédération Syndicale des Familles</h3><span class="exr">Maintenance Informatique — Stage</span></div><span class="exd">4 semaines</span></div>
+            <ul class="exul">
+              <li><i class="fas fa-caret-right eo"></i>Maintenance du parc informatique (PC, imprimantes)</li>
+              <li><i class="fas fa-caret-right eo"></i>Installation et configuration de Linux Ubuntu</li>
+              <li><i class="fas fa-caret-right eo"></i>Assistance et support technique aux utilisateurs</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exc card reveal">
+          <div class="exa"><div class="exic"><i class="fas fa-landmark"></i></div></div>
+          <div class="exb">
+            <div class="exhd"><div><h3>Mairie de Dammarie-les-Lys</h3><span class="exr">Service Informatique — Stage</span></div><span class="exd">1 semaine</span></div>
+            <ul class="exul">
+              <li><i class="fas fa-caret-right eo"></i>Maintenance et réparation de postes informatiques</li>
+              <li><i class="fas fa-caret-right eo"></i>Installation de postes et configuration d'écrans</li>
+              <li><i class="fas fa-caret-right eo"></i>Tests et sensibilisation à la cybersécurité</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="sec">
+    <div class="cnt">
+      <div class="sh"><span class="sn">05 /</span><h2>Me <span class="go">Contacter</span></h2></div>
+      <div class="ctg">
+        <div class="cti reveal">
+          <h3>Parlons ensemble !</h3>
+          <p>Je recherche un <strong>stage en entreprise</strong> dans les réseaux, systèmes ou cybersécurité (2025–2027).</p>
+          <div class="ctrs">
+            <a href="mailto:mansouriyassine99@gmail.com" class="ctr">
+              <span class="ctic"><i class="fas fa-envelope"></i></span>
+              <div><small>Email</small><strong>mansouriyassine99@gmail.com</strong></div>
+            </a>
+            <a href="tel:+33650903948" class="ctr">
+              <span class="ctic"><i class="fas fa-phone"></i></span>
+              <div><small>Téléphone</small><strong>+33 6 50 90 39 48</strong></div>
+            </a>
+            <a href="https://www.linkedin.com/in/yassine-mansouri-b574b43b0/" target="_blank" class="ctr">
+              <span class="ctic"><i class="fab fa-linkedin-in"></i></span>
+              <div><small>LinkedIn</small><strong>Voir mon profil</strong></div>
+            </a>
+            <a href="pdf&image/CV_Yassine_Mansouri.pdf" download class="ctr">
+              <span class="ctic"><i class="fas fa-file-pdf"></i></span>
+              <div><small>CV</small><strong>Télécharger mon CV</strong></div>
+            </a>
+          </div>
+        </div>
+        <form class="card reveal" id="ctf" novalidate>
+          <div class="fgr">
+            <div class="fg"><label>Nom</label><input type="text" id="fn" placeholder="Jean Dupont" required/></div>
+            <div class="fg"><label>Email</label><input type="email" id="fe" placeholder="jean@co.fr" required/></div>
+          </div>
+          <div class="fg"><label>Sujet</label><input type="text" id="fs" placeholder="Proposition de stage"/></div>
+          <div class="fg"><label>Message</label><textarea id="fm" rows="5" placeholder="Bonjour Yassine…" required></textarea></div>
+          <button type="submit" class="bp w100"><i class="fas fa-paper-plane"></i> Envoyer</button>
+          <p class="fnote" id="fnote"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="fti">
+      <div class="logo"><span class="lb">[</span><span class="ln">Yassine Mansouri</span><span class="lb">]</span></div>
+      <p>BTS SIO SISR · Lycée Léonard de Vinci, Melun · 2025–2027</p>
+      <div class="fsoc">
+        <a href="https://www.linkedin.com/in/yassine-mansouri-b574b43b0/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:mansouriyassine99@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+33650903948"><i class="fas fa-phone"></i></a>
+        <a href="https://github.com/yassinemansouri77" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <p class="fcp">© 2026 Yassine Mansouri — Fait avec <span class="er">♥</span> et du café</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
